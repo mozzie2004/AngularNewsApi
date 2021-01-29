@@ -1,0 +1,17 @@
+<div class="container">
+    <ul *ngIf="articles" class="news">
+        <li class="news__item" *ngFor="let news of articles">
+            <div class="news__img"><img  [src]="news.urlToImage" alt=""></div>
+            <div class="news__content">
+                <div class="news__title">{{news.title}}</div>
+                <div class="news__descr">{{news.description}}</div>
+            </div>
+        </li>
+    </ul>
+    <mat-paginator
+        *ngIf="articles" 
+        [length]="length"
+        [pageSize]="pageSize"
+        (page)="onPageChange($event)">
+    </mat-paginator>
+</div>
