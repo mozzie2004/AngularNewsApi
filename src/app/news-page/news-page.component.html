@@ -1,1 +1,17 @@
-<p>news-page works!</p>
+<mat-toolbar class="app__toolbar" color="primary">
+    <div class="container">
+        <a mat-raised-button routerLink="">На главную</a>
+    </div>
+</mat-toolbar>
+<div class="container">
+    <div *ngIf="data" class="page">
+        <div class="page__img"><img  [src]="curentNews.urlToImage" alt=""></div>
+        <div class="page__content">
+            <div class="page__title">{{curentNews.title}}</div>
+            <div class="page__author">{{curentNews.author}}</div>
+            <div class="page__descr">{{curentNews.content}}</div>
+            <a [href]="curentNews.url" class="page__link"><button mat-raised-button color="primary">к источнику</button></a>
+            
+        </div>
+    </div>
+</div>

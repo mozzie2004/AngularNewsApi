@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {NewsListComponent} from '../news-list/news-list.component';
 import {NewsPageComponent} from '../news-page/news-page.component';
-import {AppComponent} from '../app.component';
+import {HomePageComponent} from '../home-page/home-page.component';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component'
 
 const routes: Routes = [
-  {path: 'news', component: NewsListComponent},
-  {path: 'page', component: NewsPageComponent }
+  {path: '', component: HomePageComponent},
+  {path: 'page/:id', component: NewsPageComponent },
+  {path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 <div class="container">
     <ul *ngIf="articles" class="news">
         <li class="news__item" *ngFor="let news of articles">
-            <div class="news__img"><img  [src]="news.urlToImage" alt=""></div>
+            <a routerLink="/page/{{news.title.replace('/', '')}}" class="news__img"><img  [src]="news.urlToImage" alt=""></a>
             <div class="news__content">
                 <div class="news__title">{{news.title}}</div>
                 <div class="news__descr">{{news.description}}</div>

@@ -1,0 +1,13 @@
+<mat-toolbar class="app__toolbar" color="primary">
+    <div class="container">
+        <mat-form-field class="app__form">
+            <input (input)="onTermChange()" matInput type="text" placeholder="поиск"  [(ngModel)]="term">
+            <button mat-button *ngIf="term" matSuffix mat-icon-button (click)="term=''; onTermChange()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+    </div>
+</mat-toolbar>
+<app-news-list [articles]="articles" [filteredArticles]="filteredArticles" [length]="length"></app-news-list>
+
+

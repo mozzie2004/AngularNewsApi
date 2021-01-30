@@ -1,0 +1,36 @@
+.page {
+    margin-top: 40px;
+    min-height: 400px;
+    display: flex;
+    &__img {
+        width: 40%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        width: 60%;
+        padding: 0 20px;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &__author {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: #ccc
+    }
+    &__descr {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+    }
+}

@@ -12,7 +12,8 @@ import {MaterialModule} from './modules/app-material.module';
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsPageComponent } from './news-page/news-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     AppComponent,
     NewsListComponent,
     NewsPageComponent,
-    MainPageComponent
+    HomePageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
